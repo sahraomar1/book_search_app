@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Search App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Book Search</h1>
+    <form id="search-form">
+      <select id="search-type">
+        <option value="title">Title</option>
+        <option value="author">Author</option>
+        <option value="subject">Subject</option>
+      </select>
+      <input type="text" id="search-query" placeholder="Enter search term" required>
+      <button type="submit">Search</button>
+    </form>
+    <div id="error-message" class="error"></div>
+    <div id="filter-section">
+      <label for="year-filter-min">Min Year:</label>
+      <input type="number" id="year-filter-min" placeholder="e.g., 1900">
+      <label for="year-filter-max">Max Year:</label>
+      <input type="number" id="year-filter-max" placeholder="e.g., 2025">
+      <button onclick="applyFilter()">Apply Filter</button>
+    </div>
+    <table id="book-table">
+      <thead>
+        <tr>
+          <th onclick="sortTable('title')">Title ↕</th>
+          <th onclick="sortTable('year')">Year ↕</th>
+          <th>Author</th>
+          <th>Cover</th>
+        </tr>
+      </thead>
+      <tbody id="book-data"></tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
