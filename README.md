@@ -19,17 +19,17 @@ This application allows users to search for books by title, author, or keyword, 
 ### Docker Deployment & Load Balancing
 
 **Option 1: Simple Docker Pull and Run (Recommended)**
-[Repo link: https://hub.docker.com/repositories/emacslad](https://hub.docker.com/u/emacslad)
+[Repo link: https://hub.docker.com/repositories/sahra1](https://hub.docker.com/u/sahra1)
 ```bash
 # Pull the Docker images
-docker pull emacslad/redinsight-web-01:latest
-docker pull emacslad/redinsight-web-02:latest
-docker pull emacslad/redinsight-lb-01:latest
+docker pull sahra1/book_search_app-web-01:v1
+docker pull sahra1/book_search_app-web-02:v1
+docker pull sahra1/book_search_app-lb-01:v1
 
 # Run the containers
-docker run -d -p 8080:3000 -p 2210:22 --name web-01 emacslad/redinsight-web-01
-docker run -d -p 8081:3000 -p 2211:22 --name web-02 emacslad/redinsight-web-02
-docker run -d -p 8082:3000 -p 2212:22 --name lb-01 emacslad/redinsight-lb-01
+docker run -d -p 8079:3000 -p 2209:22 --name web-01 sahra1/book_search_app-web-01
+docker run -d -p 8080:3000 -p 2211:22 --name web-02 sahra1/book_search_app-web-02
+docker run -d -p 8082:3000 -p 2212:22 --name lb-01 sahra1/book_search_app-lb-01
 
 # Access the application
 # Web: http://localhost:8082
@@ -88,4 +88,6 @@ backend servers
     balance roundrobin
     server web01 172.20.0.11:3000 check
     server web02 172.20.0.12:3000 check
+
 ```
+<img width="542" height="468" alt="Image" src="https://github.com/user-attachments/assets/b83492c3-35df-4d5c-ab1d-b8457475c8da" />
