@@ -13,7 +13,7 @@ This application allows users to search for books by title, author, or keyword, 
 ## Local Setup
 1. Clone the repository:
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/sahraomar1/book_search_app
    cd book_search_app
 
 ### Docker Deployment & Load Balancing
