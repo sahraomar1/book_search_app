@@ -96,14 +96,18 @@ backend servers
 <img width="542" height="468" alt="Image" src="https://github.com/user-attachments/assets/b83492c3-35df-4d5c-ab1d-b8457475c8da" />
 
 ##Access the app on these ports
+
 http://localhost:8079 
 http://localhost:8080 
 http://localhost:8082
 
 ##Challenges
+
  -Handling CORS locally required an Express proxy.
  -Ensuring responsive design with Tailwind CSS for various screen sizes.
  -Debugging HAProxy reload issues due to syntax errors in the config.
  
 Author GitHub account: @sahraomar1 
+
 Docker Hub account: @sahra1
+
