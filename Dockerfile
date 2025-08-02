@@ -52,12 +52,13 @@ RUN ssh-keygen -A
 
 # Create startup script to run nginx, Node.js app and sshd
 RUN echo '#!/bin/bash\n\
-echo "🌐 Starting nginx..."\n\
+echo "Starting nginx..."\n\
 service nginx start\n\
 cd /app\n\
 su ubuntu -c "npm start" &\n\
-echo "🔐 Starting SSH daemon..."\n\
+echo "Starting SSH daemon..."\n\
 /usr/sbin/sshd -D' > /startup.sh && \
     chmod +x /startup.sh
+
 
 CMD ["/startup.sh"]
